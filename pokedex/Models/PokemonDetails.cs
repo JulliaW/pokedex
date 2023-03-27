@@ -334,10 +334,10 @@ namespace Pokedex.Models
         public class Type
         {
             public int slot { get; set; }
-            public Type type { get; set; }
+            public TypeInfo type { get; set; }
         }
 
-        public class Type2
+        public class TypeInfo
         {
             public string name { get; set; }
             public string url { get; set; }
