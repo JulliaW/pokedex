@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using pokedex.Models;
+using Pokedex.Models;
 using System.Text.Json;
 
 namespace pokedex.Controllers
@@ -31,6 +32,20 @@ namespace pokedex.Controllers
             }
 
             return View(pokemons);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            const string apiUrl = "http://pokeapi.co/api/v2/pokemon";
+
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync($"{apiUrl}/{id}");
+
+            var content = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<PokemonDetails.Root>(content);
+
+            return PartialView(result);
+
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Index";
+    int i = 0;
 }
 
 <div class="container">
@@ -10,7 +11,9 @@
     <div class="div-pokemons">
         @foreach(var pokemon in Model)
         {
-            <div class="card"> <!--Passar id pokemon quando clicar-->
+            i++;
+            <div class="card" name="@i" data-value="@i">
+                <!--Passar id pokemon quando clicar-->
                 <div class="card-inner">
                     <img class="card-avatar" src="@pokemon.Url" />
                     <br>
