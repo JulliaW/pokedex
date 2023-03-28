@@ -2,6 +2,7 @@
 using pokedex.Models;
 using Pokedex.Models;
 using System.Text.Json;
+using static pokedex.Models.PokemonList;
 
 namespace pokedex.Controllers
 {
@@ -19,7 +20,7 @@ namespace pokedex.Controllers
 
             int? i = limit * pagina;
 
-            var pokemons = new List<Pokemon>();
+            var pokemonsList = new PokemonList();
             foreach(var p in result.Results)
             {
                 i++;
@@ -28,10 +29,12 @@ namespace pokedex.Controllers
                 pokemon.Name = p.Name;
                 pokemon.Url = $"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{((i < 1000) ? i?.ToString("#000") : i)}.png";
                 
-                pokemons.Add(pokemon);
+                pokemonsList.Pokemons.Add(pokemon);
+                pokemonsList.Page = pagina;
+
             }
 
-            return View(pokemons);
+            return View(pokemonsList);
         }
 
         public async Task<IActionResult> Details(int id)
@@ -43,6 +46,8 @@ namespace pokedex.Controllers
 
             var content = await response.Content.ReadAsStringAsync();
             var result = JsonSerializer.Deserialize<PokemonDetails.Root>(content);
+
+            result.img = $"https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{id.ToString("#000")}.png";
 
             return PartialView(result);
 

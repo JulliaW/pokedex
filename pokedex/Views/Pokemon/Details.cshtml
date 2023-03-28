@@ -4,28 +4,28 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalhes</h1>
-<hr />
-
 <div>
+    <h1>@Model.name</h1>
+    <hr />
+
+    <div class="perfil">
+        <img class="card-avatar @Model.types[0].type.name"
+             src="@Model.img" />
+    </div>
+    <br />
     <label>
         <i class="fa-solid fa-id-card-clip"></i>
-        Id: 
+        Id:
         <span>@Model.id</span>
     </label>
     <br />
     <label>
-        Nome: 
-        <span>@Model.name</span>
-    </label>
-    <br />
-    <label>
-        Altura: 
+        Altura:
         <span>@Model.height</span>
     </label>
     <br />
     <label>
-        Experiência: 
+        Experiência:
         <span>@Model.base_experience</span>
     </label>
     <br />
@@ -33,6 +33,5 @@
         Tipo:
         <span>@Model.types[0].type.name</span>
     </label>
-
 
 </div>

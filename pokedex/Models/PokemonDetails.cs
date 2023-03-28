@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Build.Globbing;
+using Newtonsoft.Json;
 
 namespace Pokedex.Models
 {
@@ -279,6 +280,8 @@ namespace Pokedex.Models
             public List<Stat> stats { get; set; }
             public List<Type> types { get; set; }
             public int weight { get; set; }
+
+            public string img { get; set; }
         }
 
         public class RubySapphire

@@ -1,7 +1,73 @@
-label[b-wtpsuho872] {
+.perfil[b-wtpsuho872], h1[b-wtpsuho872]{
+    text-align: center;
+}
+
+label[b-wtpsuho872], h1[b-wtpsuho872] {
     font-weight: bold;
 }
 
-span[b-wtpsuho872]{
-    font-weight: 400;
+h1[b-wtpsuho872] {
+    text-transform: uppercase;
 }
+
+span[b-wtpsuho872] {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-avatar[b-wtpsuho872] {
+    width: 110px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    border: 1px solid #808080;
+    border-radius: 50%;
+}
+
+.grass[b-wtpsuho872] {
+    background-color: green;
+}
+
+.water[b-wtpsuho872] {
+    background-color: steelblue;
+}
+
+.fire[b-wtpsuho872] {
+    background-color: orangered;
+}
+
+.poison[b-wtpsuho872] {
+    background-color: purple;
+}
+
+.bug[b-wtpsuho872] {
+    background-color: saddlebrown;
+}
+
+.normal[b-wtpsuho872] {
+    background-color: lightsteelblue;
+}
+
+.electric[b-wtpsuho872] {
+    background-color: yellow;
+}
+
+.ground[b-wtpsuho872] {
+    background-color: sandybrown;
+}
+
+.fighting[b-wtpsuho872] {
+    background-color: darkred;
+}
+
+.psychic[b-wtpsuho872] {
+    background-color: deeppink;
+}
+
+.rock[b-wtpsuho872] {
+    background-color: grey;
+}
+
+.fairy[b-wtpsuho872] {
+    background-color: lightgray;
+}
+

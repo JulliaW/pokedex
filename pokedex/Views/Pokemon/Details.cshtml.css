@@ -1,7 +1,73 @@
-﻿label {
+﻿.perfil, h1{
+    text-align: center;
+}
+
+label, h1 {
     font-weight: bold;
 }
 
-span{
-    font-weight: 400;
+h1 {
+    text-transform: uppercase;
 }
+
+span {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-avatar {
+    width: 110px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    border: 1px solid #808080;
+    border-radius: 50%;
+}
+
+.grass {
+    background-color: green;
+}
+
+.water {
+    background-color: steelblue;
+}
+
+.fire {
+    background-color: orangered;
+}
+
+.poison {
+    background-color: purple;
+}
+
+.bug {
+    background-color: saddlebrown;
+}
+
+.normal {
+    background-color: lightsteelblue;
+}
+
+.electric {
+    background-color: yellow;
+}
+
+.ground {
+    background-color: sandybrown;
+}
+
+.fighting {
+    background-color: darkred;
+}
+
+.psychic {
+    background-color: deeppink;
+}
+
+.rock {
+    background-color: grey;
+}
+
+.fairy {
+    background-color: lightgray;
+}
+
